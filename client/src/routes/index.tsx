@@ -1,7 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
-function App() {
+export const Route = createFileRoute("/")({
+  component: Index,
+});
+
+function Index() {
   const [count, setCount] = useState(0);
   return (
     <div>
@@ -9,5 +14,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
